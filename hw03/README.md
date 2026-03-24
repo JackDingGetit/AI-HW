@@ -46,10 +46,10 @@ pip install face_recognition streamlit
 
 ```
 hw03/
-├── app.py              # 主程序入口
 ├── src/
 │   └── face_processing.py  # 人脸处理模块
-├── tests/              # 测试文件目录
+├── tests/
+│   └── app.py          # 主程序入口
 ├── run.bat             # 交互式启动脚本
 ├── run_silent.bat      # 静默启动脚本
 └── README.md           # 项目说明文档
@@ -104,7 +104,7 @@ run_silent.bat
 D:\Miniconda3\Scripts\conda.exe activate AI_class
 
 # 启动应用
-streamlit run app.py --server.port 8501
+streamlit run tests\app.py --server.port 8501
 ```
 
 ### 访问方式

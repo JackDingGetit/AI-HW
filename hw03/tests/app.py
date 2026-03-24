@@ -2,6 +2,9 @@ import streamlit as st
 import cv2
 import numpy as np
 from PIL import Image
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.face_processing import FaceProcessor
 
 # 初始化人脸处理器
