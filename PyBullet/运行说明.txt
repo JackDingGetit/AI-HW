@@ -1,0 +1,68 @@
+PyBullet 机械臂抓取仿真 - 运行说明
+=====================================
+
+一、环境准备
+------------
+1. 确保已安装 Python 3.7 或更高版本
+   验证方法：在终端输入 python --version
+
+2. 确保电脑有显示器（程序使用GUI模式）
+
+
+二、安装依赖
+------------
+打开终端（PowerShell 或 CMD），执行以下命令：
+
+    pip install pybullet pybullet-data
+
+如遇网络问题，可使用国内镜像：
+
+    pip install pybullet pybullet-data -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+三、运行程序
+------------
+方法一：在 PyBullet 文件夹内运行
+    cd f:\Python\AI-HW\PyBullet
+    python catch.py
+
+方法二：使用完整路径运行
+    python f:\Python\AI-HW\PyBullet\catch.py
+
+
+四、程序执行流程
+----------------
+程序启动后，将自动执行以下步骤：
+
+步骤1  初始化仿真环境，加载机械臂和物块
+步骤2  张开夹爪
+步骤3  移动到物块上方（夹爪向下）
+步骤4  下降到抓取位置
+步骤5  闭合夹爪并绑定物块
+步骤6  提升物块
+步骤7  移动到目标位置
+步骤8  下降到放置位置
+步骤9  释放物块
+步骤10 机械臂复位
+
+全程约需 30-60 秒完成。
+
+
+五、常见问题
+------------
+Q: 提示 "pybullet 模块未找到"
+A: 请确认已执行 pip install pybullet
+
+Q: 程序运行但看不到窗口
+A: 检查是否在远程终端运行，需要本地显示器支持
+
+Q: 如何提前终止程序
+A: 直接关闭 PyBullet 窗口，或按 Ctrl+C 终止
+
+
+六、技术参数
+------------
+仿真频率：240 Hz
+重力加速度：-9.8 m/s²
+机械臂型号：Franka Panda
+物块尺寸：0.1m × 0.1m × 0.1m
